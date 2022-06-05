@@ -14,7 +14,7 @@ const newspapers = [
     },
     {
         name: 'Gleaner',
-        address: 'https://jamaica-gleaner.com/',
+        address: 'https://jamaica-gleaner.com/sections/lead-stories',
         base: 'https://jamaica-gleaner.com',
     },
     {
@@ -40,7 +40,7 @@ newspapers.forEach((newspaper) => {
                 const title = $(this).text()
                 const url = $(this).attr('href')
                 articles.push({
-                    title: title.replace(/\s\s+/g, ' '),
+                    title: title.replace(/\s\s+/g, ''),
                     url: newspaper.base + url,                    source: newspaper.name,
                 })
             })
